@@ -1,0 +1,18 @@
+<svg width="500" height="150" viewBox="100 30 500 150" xmlns="http://www.w3.org/2000/svg">
+  <title>NARDO icon</title>
+
+  <!-- Badge: rounded rectangle. rx/ry = corner radius, stroke-width = border thickness -->
+  <rect x="110" y="40" width="480" height="130" rx="40" ry="40"
+        fill="#82cdf6" stroke="#37b2dc" stroke-width="12"/>
+
+  <!-- Lettering. Swap font-family for your Powerpuff font once installed/embedded. -->
+  <g fill="#A97C77"
+     font-family="'Powerpuff Girls'"
+     font-weight="900" font-size="86" text-anchor="middle">
+    <text x="180" y="134">N</text>
+    <text x="260" y="134">A</text>
+    <text x="340" y="134">R</text>
+    <text x="420" y="134">D</text>
+    <text x="500" y="134">O</text>
+  </g>
+</svg>

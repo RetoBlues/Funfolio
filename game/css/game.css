@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.score-board {
+    /* background-color: aqua; */
+    /* margin-left: 1000px; */
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.game-body {
+    background-color: rgb(58, 129, 0);
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    overflow: hidden;
+    cursor: none;
+    min-height: 80vh;
+    /* check ts */
+}
+
+.score,
+.highscore {
+    font-size: clamp(1em, 4vw, 2em);
+    margin-bottom: .5em;
+}
+
+.score-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(15px, 4vw, 40px);
+    margin-bottom: 20px;
+}
+
+.highscore {
+    color: black;
+}
+
+.board {
+    height: min(600px, 90vw);
+    width: min(600px, 90vw);
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* gap: clap(15px, 4vw, 80px); */
+    gap: 10%
+}
+
+.hole {
+    background-color: rgb(165, 85, 11);
+    border-radius: 50%;
+    box-shadow: inset 0 10px 0 7px rgb(53, 21, 6),
+        inset 0 20px 20px 15px rgba(0, 0, 0, .3),
+        0 0 5px rgba(0, 0, 0, .5);
+    position: relative;
+    overflow: hidden;
+}
+
+.hole .mole {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: rise .3s ease-out;
+}
+
+.mole {
+    user-select: none;
+    -webkit-user-drag: none;
+
+    /* Prevents text/image selection highlight */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE 10+ */
+
+    pointer-events: auto
+}
+
+@keyframes rise {
+    0% {
+        transform: translateX(-50%) translateY(100%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.cursor {
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-image: url('../../img/ghammer.svg');
+    background-size: 100% 100%;
+    transform: translate(-20%, -20%);
+    transition: transform .1s;
+    pointer-events: none;
+}
+
+.cursor.active {
+    transform: translate(-20%, -20%) rotate(-45deg);
+}

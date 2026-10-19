@@ -1,0 +1,136 @@
+.contactme-header {
+    font-size: clamp(32px, 8vw, 60px);
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactme-space {
+    background-color: rgb(194, 219, 249);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    box-sizing: border-box; /*keeps padding from adding to 100vw*/
+}
+
+.contactme-row1,
+.contactme-row2 {
+    /* background-color: rgb(135, 196, 240); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: clamp(30px, 8vw, 400px); /* shrinks from 400 down to 30 */
+    width: 100%
+}
+
+/* check */
+.contactme-box {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.contactme-row2,
+.contactme-box {
+    max-width: 500px;
+}
+
+.contactme-subheader {
+    font-family: TI-Nspire Sans, Arial;
+    font-size: clamp(28px, 6vw, 60px);
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    text-decoration: underline;
+}
+
+.contactme-subheader:hover {
+    color: #956e62;
+}
+
+.name-bar,
+.email-bar,
+#message-bar {
+    font-family: TI-Nspire Sans, Arial;
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    /* ^^ inset makes shadow inside box, horiz pos, vert pos, blur, shadow col(r, g, b, transparency) */
+}
+
+#message-bar {
+    width: 100%;
+    min-height: 36px;
+    resize: none;
+    overflow: hidden;
+    font-size: 14px;
+
+    /* field-sizing: content;  */
+    /*^^ grow to fit typed content, newer borwsers instead of JS*/
+}
+
+.name-bar:hover,
+.email-bar:hover,
+#message-bar:hover {
+    border-color: #956e62;
+}
+
+.name-bar:focus,
+.email-bar:focus,
+#message-bar:focus {
+    border-color: rgb(76, 157, 255);
+    outline: none;
+}
+
+.send-button {
+    margin-top: 35px;
+    font-size: clamp(28px, 6vw, 60px);
+    background-color: rgb(211, 231, 255);
+    border: 6px solid rgb(181, 209, 246);
+    height: clamp(60px, 12vw, 100px);
+    width: clamp(160px, 40vw, 300px);
+    transition: height 0.4s, border-radius 0.2s, box-shadow 0.3s ease;
+}
+
+.send-button:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.send-button:active {
+    opacity: 0.8;
+}
+/* ---------------- */
+.form-status {
+  font-size: 18px;
+  margin-top: 2px;
+  text-align: center;
+  min-height: 20px; /*reserves space so layout doesn't jump*/
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* any state with text becomes visible */
+.form-status.sending,
+.form-status.success,
+.form-status.error {
+  opacity: 1;
+}
+
+.form-status.success { color: #1e7a34; }
+.form-status.error   { color: #b03030; }
+.form-status.sending { color: #555; }

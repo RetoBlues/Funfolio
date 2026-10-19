@@ -1,0 +1,64 @@
+.footer,
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(160, 113, 108);
+    background-color: rgba(160, 113, 108, 0.8);
+}
+
+.github-icon,
+.linkedin-icon,
+.stack-icon {
+    height: 20px;
+    margin-right: 12px;
+}
+
+.github-container,
+.linkedin-container,
+.stack-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.github-container .tooltip,
+.linkedin-container .tooltip,
+.stack-container .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    top: -30px;
+    left: -30px;
+    /* IMPORTANT */
+    opacity: 0;
+    transition: opacity 0.3s;
+    /* IMPORTANT */
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.github-container:hover .tooltip,
+.linkedin-container:hover .tooltip,
+.stack-container:hover .tooltip {
+    opacity: 1;
+}
+
+.footer-info {
+    margin-left: 10px;
+}

@@ -1,0 +1,87 @@
+.header {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-color: rgb(194, 219, 249);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+}
+
+.left-section {
+    /* background-color: lightblue; */
+    display: flex;
+    align-items: center;
+}
+
+.home-icon {
+    border: none;
+    border-radius: 20px;
+
+    height: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: height 0.4s, border-radius 0.2s, box-shadow 0.3s ease;
+}
+
+.home-icon:hover {
+    border-radius: 22px;
+    height: 55px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.home-icon:active {
+    opacity: 0.8;
+}
+
+.right-section {
+    max-width: 600px;
+    margin-right: clamp(10px, 2vw, 20px);
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: clamp(8px, 3vw, 60px);
+    flex-shrink: 1;
+}
+
+.projects-tab,
+.portfolio-tab,
+.game-tab,
+.playlists-tab {
+    background-color: rgba(169, 120, 80, 0.453);
+    /* color: #A97C78; */
+    color: #A97C78;
+    border: 3px solid #A97C78;
+    border-radius: 6px;
+    padding: clamp(2px, 0.6vw, 4px) clamp(3px, 1vw, 6px);
+    /* top&bottom, left&right*/
+    font-size: clamp(12px, 1.6vw, 16px);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: padding 0.1s, font-size 0.1s, box-shadow 0.5s ease;
+    text-decoration: none;
+}
+
+.projects-tab:hover,
+.portfolio-tab:hover,
+.game-tab:hover,
+.playlists-tab:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    padding: clamp(4px, 0.9vw, 6px) clamp(5px, 1.3vw, 8px);
+    font-size: clamp(14px, 1.8vw, 18px);
+}
+
+.projects-tab:active,
+.portfolio-tab:active,
+.game-tab:active,
+.playlists-tab:active {
+    opacity: 0.8;
+}

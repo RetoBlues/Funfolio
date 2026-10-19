@@ -1,0 +1,72 @@
+.welcome-space {
+    /* background-color: lightpink; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 70px;
+    margin-bottom: 5px;
+
+    /* max-height: 160px; */
+}
+
+
+.welcome-text {
+    /* background-color: lightblue; */
+
+    font-size: clamp(24px, 6vw, 50px);
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.welcome-text1,
+.welcome-text2 {
+    margin-right: 20px;
+}
+
+.welcome-text1,
+.welcome-text2,
+.welcome-text3 {
+    transition: color 0.3s;
+    cursor: default;
+}
+
+.funfolio-text {
+    /* background-color: lightcyan; */
+
+    /* font-size: 100px; */
+    font-size: clamp(42px, 13vw, 100px);
+    color: rgb(125, 214, 255);
+    cursor: default;
+
+    animation: changeSize 3s infinite ease-in-out;
+}
+
+@keyframes changeSize {
+
+    0%,
+    100% {
+        /* font-size: 100px; */
+        transform: scale(1);
+    }
+
+    50% {
+        /* font-size: 110px; */
+        transform: scale(1.1); /* +10% */
+    }
+}
+
+.funfolio-text:hover {
+    color: rgb(162, 100, 0);
+    transition: color 0.5s;
+}
+
+.welcome-text1:hover,
+.welcome-text2:hover,
+.welcome-text3:hover {
+    color: rgb(239, 251, 255);
+}

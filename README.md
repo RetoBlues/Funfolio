@@ -1,6 +1,7 @@
 # FUNfolio
 
 **Live site → [leonardosfunfolio.com](https://leonardosfunfolio.com)**
+![FUNfolio home page](img/screenshot.png)
 
 A personal portfolio website built from scratch with plain HTML, CSS, and JavaScript — no frameworks, no libraries, no templates. It's meant to be a portfolio that's actually fun to use: a button that runs away from you, a whack-a-mole game with a persistent high score, and a working contact form, all wrapped in a responsive layout that holds up from a widescreen monitor down to a phone.
 

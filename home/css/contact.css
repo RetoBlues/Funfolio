@@ -134,3 +134,7 @@
 .form-status.success { color: #1e7a34; }
 .form-status.error   { color: #b03030; }
 .form-status.sending { color: #555; }
+/* honeypot field: hidden from humans, bots fill it in */
+.botcheck {
+    display: none;
+}

@@ -2,13 +2,11 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Leonardo's FUNfolio</title>
     <link rel="icon" type="image/png" href="../img/snook.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/welcome.css">
@@ -75,22 +73,22 @@
     <form class="contactme-space" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="d11c7016-beb4-4400-a953-5162d659d30a">
 
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"> <!--for bots-->
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off"> <!--for bots-->
 
         <div class="contactme-row1"> <!--row 1-->
             <div class="contactme-box"> <!--Name box-->
                 <div class="contactme-subheader">Name</div>
-                <input class="name-bar" type="text" name="name" placeholder="Type Name..." required>
+                <input class="name-bar" type="text" name="name" maxlength="100" placeholder="Type Name..." required>
             </div>
             <div class="contactme-box"> <!--Email box-->
                 <div class="contactme-subheader">Email</div>
-                <input class="email-bar" type="email" name="email" placeholder="Type Email..." required>
+                <input class="email-bar" type="email" name="email" maxlength="254" placeholder="Type Email..." required>
             </div>
         </div>
         <div class="contactme-row2"> <!--row 2-->
             <div class="contactme-box"> <!--Message box-->
                 <div class="contactme-subheader">Message</div>
-                <textarea id="message-bar" name="message" maxlength="2601" placeholder="Message here..."
+                <textarea id="message-bar" name="message" maxlength="2600" placeholder="Message here..."
                     required></textarea>
             </div>
             <button class="send-button" type="submit">Send</button>
@@ -102,20 +100,20 @@
         <div class="footer-info">© 2026 Leonardo Becerra</div>
         <div class="footer-icons">
             <div class="github-container">
-                <a href="https://github.com/RetoBlues" target="_blank">
-                    <img class="github-icon" src="../img/github_icon_black.svg" target="_blank">
+                <a href="https://github.com/RetoBlues" target="_blank" rel="noopener noreferrer">
+                    <img class="github-icon" src="../img/github_icon_black.svg">
                     <div class="tooltip">GitHub</div>
                 </a>
             </div>
             <div class="linkedin-container">
-                <a href="https://www.linkedin.com/in/hugoleonardobecerra" target="_blank">
-                    <img class="linkedin-icon" src="../img/linkedin_logo_black.png" target="_blank">
+                <a href="https://www.linkedin.com/in/hugoleonardobecerra" target="_blank" rel="noopener noreferrer">
+                    <img class="linkedin-icon" src="../img/linkedin_logo_black.png">
                     <div class="tooltip">LinkedIn</div>
                 </a>
             </div>
             <div class="stack-container">
-                <a href="https://stackoverflow.com/users/32969840/reto-blues" target="_blank">
-                    <img class="stack-icon" src="../img/stack_icon_black.svg" target="_blank">
+                <a href="https://stackoverflow.com/users/32969840/reto-blues" target="_blank" rel="noopener noreferrer">
+                    <img class="stack-icon" src="../img/stack_icon_black.svg">
                     <div class="tooltip">Stack</div>
                 </a>
             </div>
